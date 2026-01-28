@@ -1,54 +1,55 @@
 // difference between var, let, and const in JavaScript
+// var: function scoped, can be re-declared and updated
+// let: block scoped, cannot be re-declared but can be updated
+// const: block scoped, cannot be re-declared or updated
 
+var x = 10;
+console.log(x);
+var x= 20;
+console.log(x);
+x= 30;
+console.log(x);
 
-// var x = 10;
-// console.log(x);
-// var x= 20;
-// console.log(x);
-// x= 30;
-// console.log(x);
+let y = 10;
+console.log(y);
+ y= 20;
+console.log(y);
+y= 30;
+console.log(y);
+const z = 10;
+console.log(z);
+ z= 20;
+console.log(z);
 
-// let x = 10;
-// console.log(x);
-//  x= 20;
-// console.log(x);
-// x= 30;
-// console.log(x);
-// const x = 10;
-// console.log(x);
-//  x= 20;
-// console.log(x);
-// x= 30;
-// console.log(x);
-
-// let x = 4 + 5 + "2";
-// console.log(x);
-// console.log(typeof x);
-// let y = "4" + 5 + 2;
-// console.log(y);
-// console.log(typeof y);
+// type conversion in JavaScript
+let n = 4 + 5 + "2";
+console.log(n);
+console.log(typeof n);
+let y1 = "4" + 5 + 2;
+console.log(y1);
+console.log(typeof y1);
 // // op1: 452   op2: 92 op3:11 op4:error
 
-// console.log("10"+5);
-// console.log("10"-5);
+console.log("10"+5);
+console.log("10"-5);
 
-// console.log(4+6+0);
-// console.log(4-3+1);
-// console.log("4"-2+2);
-// console.log("4"+"5"+7+8);
-// console.log(4-"2"+1+3+"4");
+console.log(4+6+0);
+console.log(4-3+1);
+console.log("4"-2+2);
+console.log("4"+"5"+7+8);
+console.log(4-"2"+1+3+"4");
 
 
 // conditional statements in JavaScript
 
-// let num = 0;
-// if (num > 0) {
-//     console.log("The number is positive");
-// }else if(num === 0){
-//     console.log("The number is zero");
-// }else {
-//     console.log("The number is not positive");
-// }
+let num = 0;
+if (num > 0) {
+    console.log("The number is positive");
+}else if(num === 0){
+    console.log("The number is zero");
+}else {
+    console.log("The number is not positive");
+}
 
 
 // nested if else
@@ -76,37 +77,38 @@
 
 // looping statements in JavaScript
 
-// for (let i = 1;i<10;i++){
-//     console.log(i);
-// }
+for (let i = 1;i<10;i++){
+    console.log(i);
+}
 
 
-// for(let i=1; i<2; ++i){
-//     for(let j=1; j<3; j++){
-//         i++;
-//         console.log(i,j);
-//     }
-// }
+for(let i=1; i<2; ++i){
+    for(let j=1; j<3; j++){
+        i++;
+        console.log(i,j);
+    }
+}
 
 
 // patten printing
 
-// let n = 5;
-// for(let i = 1; i <= n; i++) {
-//     let str = "";
-//     for(let j = 1; j <= n; j++) {
-//         str += "* ";
-//     }
-//     console.log(str);
-// }
+let num1 = 5;
+for(let i = 1; i <= num1; i++) {
+    let str = "";
+    for(let j = 1; j <= n; j++) {
+        str += "* ";
+    }
+    console.log(str);
+}
 
-// for (let i = 1; i <= n; i++) {
-//     let str = "";
-//     for(let j = i; j <= n; j++) {
-//         str += "* ";
-//     }
-//     console.log(str);
-// }
+for (let i = 1; i <= num1; i++) {
+    let str = "";
+    for(let j = i; j <= num1; j++) {
+        str += "* ";
+    }
+    console.log(str);
+}
+
 // optput:
 // * * * * *
 // * * * *
@@ -114,87 +116,87 @@
 // * *
 // *
 
+
+
+for (let i = 1; i <= n; i++) {
+    let str = "";
+    for(let j = n-i+1; j <= n; j++) {
+        str += "* ";
+    }
+    console.log(str);
+}
+
+// output:
 // *
 // * *
 // * * *
 // * * * *
 // * * * * *
 
-// for (let i = 1; i <= n; i++) {
-//     let str = "";
-//     for(let j = n-i+1; j <= n; j++) {
-//         str += "* ";
-//     }
-//     console.log(str);
-// }
 
-//       *
-//     * *
-//   * * *
-// * * * *
-//* * * * *
 
-// for (let i = 1; i <= n; i++) {
-//     let str = "";
-//     for(let j = 1; j <= n; j++) {
-//         if (j <= n - i) {
-//             str += "  ";
-//         } else {
-//             str += "* ";
-//         }
-//     }
-//     console.log(str);
-// }
+for (let i = 1; i <= num1; i++) {
+    let str = "";
+    for(let j = 1; j <= num1; j++) {
+        if (j <= num1 - i) {
+            str += "  ";
+        } else {
+            str += "* ";
+        }
+    }
+    console.log(str);
+}
 // output:
-//       *
-//     * *
-//   * * *
-// * * * *
-//* * * * *
+//         *
+//       * *
+//     * * *
+//   * * * *
+// * * * * *
 
+// try it out
 // * * * * *
 //   * * * *
 //     * * *
 //       * *
 //         *
 
-//            *
-//          * * *
-//         * * * * *
-//        * * * * * * *
-//       * * * * * * * * *
-//      * * * * * * * * * * *
-//       * * * * * * * * *
-//        * * * * * * *
-//         * * * * *
-//          * * *
-//            *
+    //        *
+    //      * * *
+    //     * * * * *
+    //    * * * * * * *
+    //   * * * * * * * * *
+    //  * * * * * * * * * * *
+    //   * * * * * * * * *
+    //    * * * * * * *
+    //     * * * * *
+    //      * * *
+    //        *
 
 // arrays in js
 
-// let arr = [1, 2, 3, 4, 5];
-// console.log(arr[0].length);
+let arr = [1, 2, 3, 4, 5];
+console.log(arr[0].length);
 
 // join method
-// console.log(arr.join("-"));
-// console.log(typeof arr.join(""));
+console.log(arr.join("-"));
+console.log(typeof arr.join(""));
 
 // split
-// let num = "12345";
-// console.log(num.split("4"));
+let num2 = "12345";
+console.log(num2.split("4"));
 
 // let str = "1-2-3-4-5";
 
 // output:"1,2,3,4,5"
 
-// let str1 = "Hi welcome to development world";
-// console.log(str1.split(" ").length);
-// console.log(str1.split("o")); //op: ["Hi welc","me t" " develp","ment wr","ld"]
-// console.log(str1.split("uyew").length);
-// console.log(str1.split("hi").length);
-// console.log(str1.split(" Hi").length);
-// console.log(str1.split("to"));
-// console.log(str1.split(" to "));
+let str1 = "Hi welcome to development world";
+console.log(str1.split(" ").length);
+console.log(str1.split("o")); //op: ["Hi welc","me t" " develp","ment wr","ld"]
+console.log(str1.split("uyew").length);
+console.log(str1.split("hi").length);
+console.log(str1.split(" Hi").length);
+console.log(str1.split("to"));
+console.log(str1.split(" to "));
 
 
 // let num = 12345;
@@ -351,7 +353,9 @@ let data = [
 ]
 
 data.map( (val) => {
+    console.log("Value-before", val);
     val.address.city = "chennai"
+    console.log("Value-after", val);
     return val;
 })
 
